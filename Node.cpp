@@ -8,6 +8,11 @@ Node::Node(string name, int key)
   edges = vector<int>();
 }
 
+Node::~Node()
+{
+  edges.clear();
+}
+
 string Node::getName()
 {
   return name;
