@@ -9,8 +9,11 @@ CXXFLAGS = -Wall -g
 # ****************************************************
 # Targets needed to bring the executable up to date
 
-resource_manger: ResourceManager.o
-	$(CXX) $(CXXFLAGS) -o resource_manger ResourceManager.o
+resource_manger: ResourceManager.o Node.o
+	$(CXX) $(CXXFLAGS) -o resource_manger ResourceManager.o Node.o
 
 ResourceManager.o: ResourceManager.cpp
 	$(CXX) $(CXXFLAGS) -c ResourceManager.cpp
+
+Node.o: Node.cpp
+	$(CXX) $(CXXFLAGS) -c Node.cpp
