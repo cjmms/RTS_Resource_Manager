@@ -1,10 +1,8 @@
 
 #include "Node.h"
 
-Node::Node(string name, int key)
+Node::Node()
 {
-  this->name = name;
-  this->key = key;
   edges = vector<int>();
 }
 

@@ -1,4 +1,4 @@
-
+#include "Digraph.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -7,6 +7,13 @@ using namespace std;
 
 int main()
 {
+  Digraph graph;
+
+  for (auto it: graph.map)
+    cout << it.first << endl;
+
+  //Node node("fewf", 12);
+  /**
   string line;
   stringstream stream;
   string word;
@@ -26,6 +33,7 @@ int main()
     file.close();
   }
   else cout << "Unable to open file.\n";
+*/
 
   return 0;
 }

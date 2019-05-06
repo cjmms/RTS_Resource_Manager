@@ -19,7 +19,7 @@ private:
 
 public:
   vector<int> edges;
-  Node(string name, int key);
+  Node();
   ~Node();
   string getName();
   int getKey();
