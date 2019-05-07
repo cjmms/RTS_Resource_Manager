@@ -1,4 +1,4 @@
-
+#include <iostream>
 #include "Node.h"
 
 Node::Node()
@@ -9,4 +9,17 @@ Node::Node()
 Node::~Node()
 {
   edges.clear();
+}
+
+void Node::addVertex(string& name)
+{
+  edges.push_back(name);
+}
+
+void Node::print_edges()
+{
+  cout << "Edges: ";
+  for (auto const& edge: edges)
+    cout << edge << " ";
+  cout << "\n" << endl;
 }

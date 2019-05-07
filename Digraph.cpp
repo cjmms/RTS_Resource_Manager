@@ -20,25 +20,35 @@ Digraph::Digraph()
   else cout << "Unable to open file.\n";
 }
 
+
 void Digraph::deleteNode(string name)
 {
 
 }
 
+
 void Digraph::print()
 {
-
+  for (auto resource: map)
+  {
+    cout << "Resource: " << resource.first << endl;
+    resource.second.print_edges();
+  }
 }
+
 
 void Digraph::insert_pair(string& line)
 {
   stringstream stream;
-  string word;
+  string first_resource, second_resource;
 
   stream.str(line);
-  stream >> word;
+  stream >> first_resource;
+
   // insert() will not replace the old value(if keys are same)
-  map.insert(make_pair(word, Node()));
-  stream >> word;
-  map.insert(make_pair(word, Node()));
+  map.insert(make_pair(first_resource, Node()));
+  stream >> second_resource;
+  map.insert(make_pair(second_resource, Node()));
+
+  map.at(first_resource).addVertex(second_resource); // add vertex point from first to second
 }

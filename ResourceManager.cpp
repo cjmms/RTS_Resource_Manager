@@ -8,10 +8,7 @@ using namespace std;
 int main()
 {
   Digraph graph;
-
-
-  for (auto it: graph.map)
-    cout << it.first << endl;
-
+  graph.print();
+  
   return 0;
 }

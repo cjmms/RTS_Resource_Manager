@@ -13,9 +13,12 @@ using namespace std;
 
 class Node
 {
+private:
+  vector<string> edges;
 
 public:
-  vector<string> edges;
   Node();
   ~Node();
+  void addVertex(string& name);
+  void print_edges();
 };
