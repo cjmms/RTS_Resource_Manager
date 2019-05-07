@@ -32,7 +32,7 @@ void Digraph::print()
   for (auto it: map)
   {
     cout << "Resource: " << it.first << endl;
-    resource.second.print_edges();
+    it.second.print_edges();
   }
 }
 
