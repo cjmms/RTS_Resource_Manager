@@ -3,7 +3,7 @@
 
 using namespace std;
 
-/**
+/*
  * Node(Vertex) class
  * Each node represent a resource
  * Name stores name of the object (e.g. Bullets)
@@ -19,6 +19,6 @@ private:
 public:
   Node();
   ~Node();
-  void addVertex(string& name);
+  void addEdge(string& name);
   void print_edges();
 };

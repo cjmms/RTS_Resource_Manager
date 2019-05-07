@@ -11,7 +11,7 @@ Node::~Node()
   edges.clear();
 }
 
-void Node::addVertex(string& name)
+void Node::addEdge(string& name)
 {
   edges.push_back(name);
 }

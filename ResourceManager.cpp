@@ -5,10 +5,11 @@
 #include <sstream>
 using namespace std;
 
+
 int main()
 {
   Digraph graph;
   graph.print();
-  
+
   return 0;
 }

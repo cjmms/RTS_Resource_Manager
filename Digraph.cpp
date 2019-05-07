@@ -21,7 +21,7 @@ Digraph::Digraph()
 }
 
 
-void Digraph::deleteNode(string name)
+void Digraph::deleteNode(string& name)
 {
 
 }
@@ -29,14 +29,16 @@ void Digraph::deleteNode(string name)
 
 void Digraph::print()
 {
-  for (auto resource: map)
+  for (auto it: map)
   {
-    cout << "Resource: " << resource.first << endl;
+    cout << "Resource: " << it.first << endl;
     resource.second.print_edges();
   }
 }
 
-
+// put a line of resource("handgun bullets") into a stringsteam
+// and read two resources seperately
+// All the nodes are not allocated dynamically
 void Digraph::insert_pair(string& line)
 {
   stringstream stream;
@@ -50,5 +52,6 @@ void Digraph::insert_pair(string& line)
   stream >> second_resource;
   map.insert(make_pair(second_resource, Node()));
 
-  map.at(first_resource).addVertex(second_resource); // add vertex point from first to second
+  // add edge pointing from first_resource to second_resource
+  map.at(first_resource).addEdge(second_resource);
 }
