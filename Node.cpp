@@ -3,20 +3,10 @@
 
 Node::Node()
 {
-  edges = vector<int>();
+  edges = vector<string>();
 }
 
 Node::~Node()
 {
   edges.clear();
-}
-
-string Node::getName()
-{
-  return name;
-}
-
-int Node::getKey()
-{
-  return key;
 }

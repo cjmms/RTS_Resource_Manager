@@ -13,14 +13,9 @@ using namespace std;
 
 class Node
 {
-private:
-  int key;
-  string name;
 
 public:
-  vector<int> edges;
+  vector<string> edges;
   Node();
   ~Node();
-  string getName();
-  int getKey();
 };

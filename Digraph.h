@@ -6,6 +6,8 @@ using namespace std;
 
 class Digraph
 {
+private:
+  void insert_pair(string& line);
 
 public:
   unordered_map<string, Node> map;
