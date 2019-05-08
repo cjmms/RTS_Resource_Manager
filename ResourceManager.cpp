@@ -3,27 +3,19 @@
 #include <string>
 using namespace std;
 
-void start() {
-  Digraph graph;
-  string input;
-
-  graph.print();
-
-  string str = "bullets";
-  graph.deleteNode(str);
-
-  while(1)
-  {
-    cout << "Please type q to quit:" << endl;
-    getline(cin, input);
-    if (input == "q") break;
-  }
-
-}
-
 
 int main()
 {
-  start();
+  Digraph graph;
+  string input;
+
+  while(1)
+  {
+    cout << "Please type q to quit, type name of the node to delete node:" << endl;
+    getline(cin, input);
+    if (input == "q") break;
+    else graph.deleteNode(input);
+  }
+  
   return 0;
 }

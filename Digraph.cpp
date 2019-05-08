@@ -8,7 +8,7 @@ using namespace std;
 Digraph::Digraph()
 {
   string line;
-  ifstream file ("resource.txt");
+  ifstream file("resource.txt");
 
   if (file.is_open())
   {
@@ -18,12 +18,14 @@ Digraph::Digraph()
     file.close();
   }
   else cout << "Unable to open file.\n";
+  print();
 }
 
-// TODO: implement deleteNode(string& name)
+
 void Digraph::deleteNode(string& name)
 {
-  map.erase(name);
+  if (map.find(name) != map.end())
+    map.erase(name);
   print();
 }
 

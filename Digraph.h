@@ -12,7 +12,6 @@ using namespace std;
 class Digraph
 {
 private:
-
   // constructor will read the file automatically
   unordered_map<string, Node> map;
 
