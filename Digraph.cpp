@@ -35,8 +35,8 @@ void Digraph::print()
     cout << "Resource: " << it.first << endl;
     it.second.print_usability(map);
     it.second.print_edges();
-    cout << '\n';
   }
+  cout << '\n';
 }
 
 // put a line of resource("handgun bullets") into a stringsteam

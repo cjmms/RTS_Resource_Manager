@@ -6,11 +6,6 @@ Node::Node()
   edges = vector<string>();
 }
 
-Node::~Node()
-{
-  edges.clear();
-}
-
 
 void Node::addEdge(string& name)
 {
@@ -27,6 +22,7 @@ void Node::print_edges()
 }
 
 
+// iterate edges and check if every element still exist in the map
 void Node::print_usability(unordered_map<string, Node>& map)
 {
   bool usable = true;
@@ -35,6 +31,7 @@ void Node::print_usability(unordered_map<string, Node>& map)
 
   cout << "Usability: " << BoolToString(usable) << endl;
 }
+
 
 inline const char * const Node::BoolToString(bool b)
 {

@@ -5,7 +5,6 @@
 using namespace std;
 
 /*
- * Node(Vertex) class
  * Each node represent a resource
  * Name stores name of the object (e.g. Bullets)
  * Currently, node chooses vector as a container for edges
@@ -16,12 +15,14 @@ class Node
 {
 private:
   vector<string> edges;
+  const char * const BoolToString(bool b);
 
 public:
   Node();
-  ~Node();
   void addEdge(string& name);
   void print_edges();
+
+  // check if every edges still exist
+  // Digraph should provide the map
   void print_usability(unordered_map<string, Node>& map);
-  const char * const BoolToString(bool b);
 };

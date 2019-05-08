@@ -1,18 +1,29 @@
 #include "Digraph.h"
 #include <iostream>
-#include <fstream>
 #include <string>
-#include <sstream>
 using namespace std;
 
-
-int main()
-{
+void start() {
   Digraph graph;
+  string input;
+
   graph.print();
 
   string str = "bullets";
   graph.deleteNode(str);
 
+  while(1)
+  {
+    cout << "Please type q to quit:" << endl;
+    getline(cin, input);
+    if (input == "q") break;
+  }
+
+}
+
+
+int main()
+{
+  start();
   return 0;
 }
