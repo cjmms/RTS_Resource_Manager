@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
@@ -21,4 +22,6 @@ public:
   ~Node();
   void addEdge(string& name);
   void print_edges();
+  void print_usability(unordered_map<string, Node>& map);
+  const char * const BoolToString(bool b);
 };

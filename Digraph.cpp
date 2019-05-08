@@ -33,7 +33,9 @@ void Digraph::print()
   for (auto it: map)
   {
     cout << "Resource: " << it.first << endl;
+    it.second.print_usability(map);
     it.second.print_edges();
+    cout << '\n';
   }
 }
 

@@ -11,10 +11,12 @@ Node::~Node()
   edges.clear();
 }
 
+
 void Node::addEdge(string& name)
 {
   edges.push_back(name);
 }
+
 
 void Node::print_edges()
 {
@@ -22,4 +24,19 @@ void Node::print_edges()
   for (auto const& edge: edges)
     cout << edge << " ";
   cout << "\n" << endl;
+}
+
+
+void Node::print_usability(unordered_map<string, Node>& map)
+{
+  bool usable = true;
+  for (auto const& edge: edges)
+    if (map.find(edge) == map.end()) usable = false;
+
+  cout << "Usability: " << BoolToString(usable) << endl;
+}
+
+inline const char * const Node::BoolToString(bool b)
+{
+  return b ? "true" : "false";
 }
