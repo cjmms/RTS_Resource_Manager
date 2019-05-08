@@ -20,10 +20,11 @@ Digraph::Digraph()
   else cout << "Unable to open file.\n";
 }
 
-
+// TODO: implement deleteNode(string& name)
 void Digraph::deleteNode(string& name)
 {
-
+  map.erase(name);
+  print();
 }
 
 

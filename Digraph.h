@@ -7,7 +7,7 @@ using namespace std;
 // Build a directed graph(Digraph) for resource manager
 // Digraph is implemented by adjacency list
 // This project uses unordered_map to implement adjacency list
-//  key is the name of resource and value is a node which contains edges
+// key is the name of resource and value is a node which contains edges
 
 class Digraph
 {

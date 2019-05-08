@@ -11,5 +11,8 @@ int main()
   Digraph graph;
   graph.print();
 
+  string str = "bullets";
+  graph.deleteNode(str);
+
   return 0;
 }
