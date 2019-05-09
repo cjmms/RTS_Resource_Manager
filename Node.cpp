@@ -22,7 +22,7 @@ void Node::print_edges()
 }
 
 
-// iterate edges and check if every element still exist in the map
+// iterate edges and check if every edge still exist in the map
 void Node::print_usability(unordered_map<string, Node>& map)
 {
   bool usable = true;

@@ -24,7 +24,7 @@ Digraph::Digraph()
 
 void Digraph::deleteNode(string& name)
 {
-  if (map.find(name) != map.end())
+  if (map.find(name) != map.end()) // if key exists
     map.erase(name);
   print();
 }
@@ -51,7 +51,6 @@ void Digraph::insert_pair(string& line)
 
   stream.str(line);
   stream >> first_resource;
-
   // insert() will not replace the old value(if keys are same)
   map.insert(make_pair(first_resource, Node()));
   stream >> second_resource;
